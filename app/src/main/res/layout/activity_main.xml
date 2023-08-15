@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|start">
+
+
+                <ImageView
+                    android:id="@+id/iv_instagram"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/img" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_keyboard_arrow_down" />
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="30dp"/>
+                <ImageView
+                    android:id="@+id/iv_favorit"
+                    android:layout_width="40dp"
+                    android:src="@drawable/ic_favorite"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="30dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_fly"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/img_1" />
+
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:gravity="center_vertical|bottom"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="65dp"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/krug"
+                android:layout_height="65dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="56dp"
+                android:id="@+id/iv_profil"
+                android:layout_gravity="center"
+                android:layout_height="56dp"
+                android:src="@mipmap/ic_launcher"
+                app:shapeAppearanceOverlay="@style/circle" />
+                <LinearLayout
+                    android:layout_width="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/iv_add_styl"
+                    android:layout_height="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="20dp"
+                    android:gravity="bottom|end"
+                    android:src="@drawable/ic_add_circle"
+                    android:layout_height="20dp"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#A8A0A0"
+                android:layout_gravity="bottom"
+                android:layout_height="1dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rv_instagram"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="5.5"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_width="40dp"
+                android:src="@drawable/ic_home_1"
+                android:layout_height="35dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="40dp"
+                android:src="@drawable/ic_search"
+                android:layout_height="35dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_plus"
+                android:layout_width="40dp"
+                android:src="@drawable/ic_add_box"
+                android:layout_height="35dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_"
+                android:layout_width="50dp"
+                android:src="@drawable/img_5"
+                android:layout_height="45dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_oval"
+                android:layout_width="38dp"
+                android:background="@drawable/oval"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="33dp"
+                    android:id="@+id/iv_profil_down"
+                    android:layout_height="33dp"
+                    android:src="@mipmap/ic_launcher"
+                    app:shapeAppearanceOverlay="@style/circle" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_post_text"
+                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="Рекомендуемое для вас"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/iv_iks"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_close"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="35dp"
+            android:id="@+id/iv_profil"
+            app:shapeAppearanceOverlay="@style/circle"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:layout_height="35dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_usename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="name"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tv_titile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:text="title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_subscib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/style"
+                app:backgroundTint="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#C3BDBD"
+                    android:textSize="15dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:text="Подписаться"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_menu"
+            android:layout_width="20dp"
+            android:gravity="center"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:layout_height="20dp">
+            <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_more_vert"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_post"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/img_14"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding = "5dp"
+        android:paddingEnd="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_favorite"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/img_10"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/img_1"/>
+        <TextView
+            android:id="@+id/tv_like"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/img_11"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding = "5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_liked_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Нравится: "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity=""
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lol:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:id="@+id/tv_post_short_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            android:text="Free Message icons, logos, symbols in 50+ UI design styles. Download Static"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_post_full_text"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="20sp"
+            android:text="Free Message icons, logos, symbols in 50+ UI design styles. Download Static"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding = "5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Смотреть все комментарии (1)"
+            android:textColor="#787272"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding = "5dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="14 августа"
+            android:textColor="#787272"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tv_tochka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" · "
+            android:textStyle="bold"
+            android:textColor="#787272"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tv_translet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Показать перевод"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="35dp">
+
+    </LinearLayout>
+</LinearLayout>
