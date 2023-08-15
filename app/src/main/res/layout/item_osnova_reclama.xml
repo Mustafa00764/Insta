@@ -47,6 +47,12 @@
         android:orientation="horizontal"
         android:padding="8dp"
         android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:gravity="center"
+            android:background="@drawable/story_bg"
+            android:layout_height="40dp">
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="35dp"
             android:id="@+id/iv_profil"
@@ -54,7 +60,7 @@
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher"
             android:layout_height="35dp"/>
-
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ll_name"
             android:layout_width="0dp"
@@ -70,14 +76,14 @@
                 android:maxLines="1"
                 android:text="name"
                 android:textSize="15sp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/tv_titile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:text="title" />
 
         </LinearLayout>
@@ -88,20 +94,19 @@
             android:layout_height="wrap_content"
             android:gravity="top"
             android:orientation="horizontal">
-
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="@drawable/style"
-                app:backgroundTint="@null" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/style"
+                    app:backgroundTint="@null" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:textColor="@color/black"
+                    android:textColor="#E6E5E5"
                     android:textSize="15dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
@@ -110,6 +115,7 @@
                     android:text="Подписаться"
                     android:layout_height="wrap_content"/>
             </FrameLayout>
+
         </LinearLayout>
         <LinearLayout
             android:id="@+id/ll_menu"
@@ -127,15 +133,62 @@
 
         </LinearLayout>
     </LinearLayout>
-
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/iv_post"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:src="@drawable/img_14"
+        android:src="@drawable/img_18"
         android:scaleType="centerCrop"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="false"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#283A62"
+        android:layout_gravity="bottom"
+        android:layout_height="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Message"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|end"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:text="Instagram"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="13dp"
+                android:src="@drawable/ic_arrow_forward"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:padding = "5dp"
@@ -176,7 +229,7 @@
             android:id="@+id/tv_liked_count"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Нравится: "
+            android:text="просмотров"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="15sp"
@@ -194,15 +247,7 @@
         android:orientation="horizontal"
         android:padding="5dp"
         android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tv_"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="lol:"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:layout_marginStart="5dp" />
+
 
         <TextView
             android:id="@+id/tv_post_short_text"
@@ -232,7 +277,7 @@
             android:id="@+id/tv_comment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Смотреть все комментарии (1)"
+            android:text="Смотреть все комментарии (0)"
             android:textColor="#787272"
             android:textSize="15sp"
             android:layout_marginStart="5dp"
